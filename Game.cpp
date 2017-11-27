@@ -46,8 +46,8 @@ bool Game::init(const char* title, int xpos, int ypos, int high, int width, int 
 //    m_go = new GameObject();
     m_enemy = new Enemy(pParamsEnemy);
 
-    m_bRunning = TextureManager::Instance()->Load("/home/default/projectGame/SDLproject/assets/monkey.png", "monkey", g_pRenderer);
-    m_bRunning = TextureManager::Instance()->Load("/home/default/projectGame/SDLproject/assets/girl_spritestrip.png", "girl", g_pRenderer);
+    m_bRunning = TextureManager::Instance()->Load("/home/default/projectGame/SD_Lproject/assets/monkey.png", "monkey", g_pRenderer);
+    m_bRunning = TextureManager::Instance()->Load("/home/default/projectGame/SDL_project/assets/girl_spritestrip.png", "girl", g_pRenderer);
 //    m_go->load(200,200,250, 250,"girl");
 //    m_player->load(300,300,250, 250, "girl");
 //    m_enemy->load(100,100,80, 60,"monkey");
