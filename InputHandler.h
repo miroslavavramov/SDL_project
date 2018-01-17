@@ -2,7 +2,7 @@
 #define __InputHandler__
 #include <SDL2/SDL.h>
 #include <stdint.h>
-
+#include <vector>
 
 class InputHandler
 {
@@ -22,11 +22,19 @@ public:
     void update();
     void clean();
     //SDL_GetKeyboardState(int numkeys);
+    enum mouse_buttons
+    {
+        LEFT = 0,
+        MIDDLE = 1,
+        RIGHT = 2
+    };
 
 private:
     InputHandler(){}
     ~InputHandler(){}
     
+    std::vector<bool> m_mouseButtonStates;
+
     //handle kayboard ivents
     void onKeyDown();
     void onKeyUp();

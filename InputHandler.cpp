@@ -4,6 +4,11 @@
 
 InputHandler* InputHandler::s_pInstance = 0;
 
+/*InputHandler::InputHandler()
+{
+    
+}
+*/
 void InputHandler::clean()
 {
 }
