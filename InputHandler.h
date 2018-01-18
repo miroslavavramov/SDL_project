@@ -4,6 +4,13 @@
 #include <stdint.h>
 #include <vector>
 
+enum mouse_buttons
+{
+    LEFT = 0,
+    MIDDLE = 1,
+    RIGHT = 2
+};
+
 class InputHandler
 {
 public:
@@ -22,15 +29,11 @@ public:
     void update();
     void clean();
     //SDL_GetKeyboardState(int numkeys);
-    enum mouse_buttons
-    {
-        LEFT = 0,
-        MIDDLE = 1,
-        RIGHT = 2
-    };
+
+    inline bool getMouseButtonState(int buttonNumber){ return m_mouseButtonStates[buttonNumber];}
 
 private:
-    InputHandler(){}
+    InputHandler();
     ~InputHandler(){}
     
     std::vector<bool> m_mouseButtonStates;
